@@ -1,3 +1,4 @@
+[![Build, Test](https://github.com/Zhukkovaa/Drawing_nested_triangles/actions/workflows/python-app.yml/badge.svg)](https://github.com/Zhukkovaa/Drawing_nested_triangles/actions/workflows/python-app.yml)
 # Лабораторная работа по дисциплине "Компьютерная графика" №1. 
 ![alt text](https://github.com/Zhukkovaa/Drawing_nested_triangles/blob/main/SSAU.svg)
 # Описание задачи
@@ -7,7 +8,7 @@
 
 | Язык | Интерпретатор/Версия | Среда разработки | 
 | ------ | ------ | ------ |
-| Python | Python / w64 3.9 | PyCharm 2022 3.2 |
+| Python | Python / w64 3.11 | PyCharm 2022 3.2 |
 
 ## Используемые библиотеки:
 * tkinter - для создания графического пользовательского интерфейса (GUI)
@@ -23,4 +24,4 @@
 ## Установка и запуск:
 1. ```git clone https://github.com/Zhukkovaa/Drawing_nested_triangles.git```
 2. ```cd <your_project_folder>```
-3. ```python3.9 main.py```
+3. ```python3.11 main.py```
