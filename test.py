@@ -29,7 +29,7 @@ class TestValidateInput(unittest.TestCase):
         result = validate_input(input_num, error_label)
         self.assertFalse(result)
         # Проверка, что заглушка была вызвана с нужными аргументами
-        error_label.config.assert_called_once_with(text="Введите целое положительное число больше 0")
+        error_label.config.assert_called_once_with(text="Enter a positive integer greater than 0")
 
     def test_negative_integer2(self):
         # Тестирование ввода отрицательного целого числа
@@ -38,7 +38,7 @@ class TestValidateInput(unittest.TestCase):
         result = validate_input(input_num, error_label)
         self.assertFalse(result)
         # Проверка, что заглушка была вызвана с нужными аргументами
-        error_label.config.assert_called_once_with(text="Введите целое положительное число больше 0")
+        error_label.config.assert_called_once_with(text="Enter a positive integer greater than 0")
 
     def test_zero_input(self):
         # Тестирование ввода нуля
@@ -47,7 +47,7 @@ class TestValidateInput(unittest.TestCase):
         result = validate_input(input_num, error_label)
         self.assertFalse(result)
         # Проверка, что заглушка была вызвана с нужными аргументами
-        error_label.config.assert_called_once_with(text="Введите целое положительное число больше 0")
+        error_label.config.assert_called_once_with(text="Enter a positive integer greater than 0")
 
     def test_letters_input(self):
         # Тестирование ввода нечисловых данных
@@ -56,7 +56,7 @@ class TestValidateInput(unittest.TestCase):
         result = validate_input(input_num, error_label)
         self.assertFalse(result)
         # Проверка, что заглушка была вызвана с нужными аргументами
-        error_label.config.assert_called_once_with(text="Введите числовое значение")
+        error_label.config.assert_called_once_with(text="Enter a numeric value")
 
     def test_symbols_input(self):
         # Тестирование ввода нечисловых данных
@@ -65,7 +65,7 @@ class TestValidateInput(unittest.TestCase):
         result = validate_input(input_num, error_label)
         self.assertFalse(result)
         # Проверка, что заглушка была вызвана с нужными аргументами
-        error_label.config.assert_called_once_with(text="Введите числовое значение")
+        error_label.config.assert_called_once_with(text="Enter a numeric value")
 
 if __name__ == '__main__':
     unittest.main()
