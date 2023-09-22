@@ -1,4 +1,6 @@
+# Название вашего рабочего процесса (workflow)
 name: Build, Test
+# События, которые запускают рабочий процесс
 on:
   push:
     branches:
@@ -6,31 +8,32 @@ on:
   pull_request:
     branches:
       - main
+# Определение задач (jobs)
 jobs:
+  # Задача "build"
   build:
-    runs-on: ubuntu-latest
-
+    runs-on: self-hosted
+    # Шаги (steps) задачи "build"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
-
+          python-version: '3.9'
+  # Задача "test"
   test:
+    # Зависимость от задачи "build"
     needs: build
-    runs-on: ubuntu-latest
-
+    runs-on: self-hosted
+    # Шаги (steps) задачи "test"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: '3.9'
 
       - name: Run tests
         run: python -m unittest -v test
